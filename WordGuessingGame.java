@@ -11,6 +11,7 @@ public class WordGuessingGame
     private String hiddenWord;
     private String guessedWord;
     private int numberOfTries;
+    private InputReader reader;
 
     /**
      * Construtor para objetos da classe WordGuessingGame
