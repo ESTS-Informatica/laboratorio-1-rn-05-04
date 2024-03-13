@@ -12,15 +12,17 @@ public class WordGuessingGame
     private String guessedWord;
     private int numberOfTries;
     private InputReader reader;
+    private WordGenerator generator;
 
     /**
      * Construtor para objetos da classe WordGuessingGame
      */
     public WordGuessingGame()
     {
+        generator = new WordGenerator();
         // inicializa variáveis de instância
-        hiddenWord = "abc";
-        guessedWord = "___";
+        hiddenWord = generator.generateWord();
+        guessedWord = initializeGuessedWord();
         numberOfTries = 0;
         reader = new InputReader();
     }
@@ -47,6 +49,16 @@ public class WordGuessingGame
         char[] charArray = s.toCharArray();
         charArray[pos] = c;
         return new String(charArray);
+    }
+    
+    private String initializeGuessedWord(){
+        int len = hiddenWord.length();
+        String newWord = "";
+        for (int i = 0; i < len; i++)
+        {
+            newWord += "_";
+        }
+        return newWord;   
     }
     
     private boolean guess(char letter){
