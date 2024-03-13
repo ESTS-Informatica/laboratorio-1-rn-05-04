@@ -22,6 +22,7 @@ public class WordGuessingGame
         hiddenWord = "abc";
         guessedWord = "___";
         numberOfTries = 0;
+        reader = new InputReader();
     }
     
     public String getHiddenWord(){
