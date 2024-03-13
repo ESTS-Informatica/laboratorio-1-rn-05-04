@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class WordGenerator {
     ArrayList<String> words;
@@ -7,7 +8,7 @@ public class WordGenerator {
         words = new ArrayList<String>();
     }
     
-    public void fillArrayList() {
+    private void fillArrayList() {
         words.add("boolean");
         words.add("break");
         words.add("byte");
@@ -23,5 +24,13 @@ public class WordGenerator {
         words.add("if");
         words.add("import");
         words.add("int");
+    }
+    
+    private String generateWord() {
+        Random rnd = new Random();
+        
+        int rndNumber = rnd.nextInt(words.size());
+        
+        return words.get(rndNumber);
     }
 }
