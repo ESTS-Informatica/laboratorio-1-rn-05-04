@@ -82,9 +82,9 @@ public class WordGuessingGame
             showWelcome();
             showGuessedWord();
             if (guess(reader.getChar("What letter is in the word?: "))){
-                System.out.println("A letra estava na palavra");
+                System.out.println("The letter is in the word");
             }else{
-                System.out.println("A letra não estava na palavra");
+                System.out.println("The letter is not in the word");
             }
             System.out.println(guessedWord);
             numberOfTries++;
