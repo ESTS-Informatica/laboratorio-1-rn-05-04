@@ -6,6 +6,7 @@ public class WordGenerator {
     
     public WordGenerator() {
         words = new ArrayList<String>();
+        fillArrayList();
     }
     
     private void fillArrayList() {
@@ -26,7 +27,7 @@ public class WordGenerator {
         words.add("int");
     }
     
-    private String generateWord() {
+    public String generateWord() {
         Random rnd = new Random();
         
         int rndNumber = rnd.nextInt(words.size());
