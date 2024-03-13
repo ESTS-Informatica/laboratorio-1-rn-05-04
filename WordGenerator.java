@@ -33,4 +33,8 @@ public class WordGenerator {
         
         return words.get(rndNumber);
     }
+    
+    private void addWord(String word) {
+        words.add(word);
+    }
 }
